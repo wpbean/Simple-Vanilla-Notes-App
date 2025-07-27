@@ -15,7 +15,7 @@ A beautiful, responsive note-taking application built with vanilla JavaScript, f
 
 ## 🚀 Demo
 
-_Live Demo: [View Demo](https://vanilla-js-simple-password-generato.vercel.app/)_
+_Live Demo: [View Demo](https://simple-vanilla-notes-app.vercel.app/)_
 
 ## 🛠️ Technologies Used
 
