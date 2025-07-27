@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Notes App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>✨ Modern Notes</h1>
+            <p>Capture your thoughts with style</p>
+        </header>
+
+        <main class="main-content">
+            <div class="controls">
+                <button class="btn btn-primary" id="addNoteBtn">
+                    <span>➕</span>
+                    Add New Note
+                </button>
+                <button class="btn btn-secondary" id="clearAllBtn">
+                    <span>🗑️</span>
+                    Clear All
+                </button>
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search notes...">
+                </div>
+            </div>
+
+            <div id="notesContainer">
+                <div class="notes-grid" id="notesGrid"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Add/Edit Note -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Add New Note</h2>
+                <button class="close-btn" id="closeModalBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="noteForm">
+                    <div class="form-group">
+                        <label class="form-label" for="noteTitle">Title</label>
+                        <input type="text" class="form-input" id="noteTitle" placeholder="Enter note title..." required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="noteContent">Content</label>
+                        <textarea class="form-input form-textarea" id="noteContent"
+                            placeholder="Write your note content..." required></textarea>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                        <button type="submit" class="btn btn-primary" id="saveBtn">Save Note</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Preview Note -->
+    <div class="modal-overlay" id="previewModalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title" id="previewModalTitle">Note Preview</h2>
+                <div class="preview-actions">
+                    <button class="action-btn edit-btn" id="previewEditBtn" title="Edit note">
+                        ✏️
+                    </button>
+                    <button class="close-btn" id="closePreviewModalBtn">&times;</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="preview-content">
+                    <div class="preview-text" id="previewContent"></div>
+                    <div class="preview-meta">
+                        <div class="preview-dates" id="previewDates"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
